@@ -1,4 +1,4 @@
-import input_data
+from tensorflow.exampls.tutorials.minst import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 '''
 Each MNIST data point has two parts, an image and a label. Images are 
@@ -63,7 +63,7 @@ stochastic training. Specifically in this case "Stochastic gradient
 descent." 
 '''
 for i in range(1000):
-    batch_xs, batch_ys = mnist.train.next_batch(150)
+    batch_xs, batch_ys = mnist.train.next_batch(100)
     sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 
 '''
