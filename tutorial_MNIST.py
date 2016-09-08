@@ -63,7 +63,7 @@ stochastic training. Specifically in this case "Stochastic gradient
 descent." 
 '''
 for i in range(1000):
-    batch_xs, batch_ys = mnist.train.next_batch(100)
+    batch_xs, batch_ys = mnist.train.next_batch(150)
     sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 
 '''
